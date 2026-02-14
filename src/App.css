@@ -1,0 +1,123 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./assets/font/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./assets/font/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./assets/font/NeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./assets/font/NeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./assets/font/NeueMontreal-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+@import "tailwindcss";
+
+@theme {
+  --font-neue: "Neue Montreal", sans-serif;
+  --color-brand: #e1c06e;
+}
+
+.gradient-border {
+  border: 1px solid;
+  border-image-source: linear-gradient(180deg, #C1842D 0%, #ECC974 100%);
+  border-image-slice: 1;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+
+.button-gradient {
+  display: inline-block;
+  padding: 3px;
+  outline: none;
+  border: 0;
+  border-radius: 50px;
+  text-transform: capitalize;
+  background: linear-gradient(180deg, #C1842D 0%, #ECC974 100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-gradient span {
+  display: inline-block;
+  background-color: #E1C06E;
+}
+
+.hero__title_gradient {
+  background: linear-gradient(180deg, #c1842d 0%, #ecc974 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.hero_button {
+  display: inline-block;
+  padding: 2px;
+  outline: none;
+  border: 0;
+  border-radius: 50px;
+  text-transform: capitalize;
+  background: linear-gradient(90deg, #db5095 0%, #1945e8 100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero_button span {
+  display: inline-block;
+  background-color: #22242d;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  border-radius: 50px;
+  padding: 16px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero_button:hover span {
+  background-color: transparent;
+}
+
+.search_bg {
+  background: linear-gradient(90deg, #512c3d 0%, #282730 100%);
+  border: 1px solid #fff;
+}
+
+.text_gold_gradient {
+  background: linear-gradient(to bottom, #c1842d, #ecc974);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
