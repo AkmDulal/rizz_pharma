@@ -7,54 +7,6 @@ import { slideUp, staggerContainer, fadeIn } from "@/lib/animations";
 
 function Product() {
   const [searchQuery, setSearchQuery] = useState("");
-  const categories = [
-    {
-      id: 1,
-      title: "Weight Loss",
-      gradient: "from-pink-400 via-rose-300 to-orange-300",
-      size: "large",
-      position: "col-span-1 row-span-2",
-    },
-    {
-      id: 2,
-      title: "Sexual Health",
-      gradient: "from-orange-300 via-amber-200 to-yellow-200",
-      size: "medium",
-      position: "col-span-1 row-span-1",
-    },
-    {
-      id: 3,
-      title: "Brain Health",
-      gradient: "from-purple-300 via-violet-200 to-indigo-200",
-      size: "large",
-      position: "col-span-1 row-span-2",
-    },
-    {
-      id: 4,
-      title: "Athletic Performance",
-      gradient: "from-pink-300 via-rose-200 to-purple-200",
-      size: "medium",
-      position: "col-span-1 row-span-1",
-    },
-    {
-      id: 5,
-      title: "Testosterone HRT",
-      gradient: "from-purple-500 via-violet-400 to-fuchsia-400",
-      size: "large",
-      position: "col-span-1 row-span-2",
-    },
-    {
-      id: 6,
-      title: "Beauty and Hair Loss",
-      gradient: "from-cyan-300 via-blue-200 to-indigo-200",
-      size: "medium",
-      position: "col-span-1 row-span-1",
-    },
-  ];
-
-  const filteredCategories = categories.filter((cat) =>
-    cat.title.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
 
   return (
     <div className="md:-mt-67.5">
@@ -82,17 +34,6 @@ function Product() {
               </div>
             </div>
           </div>
-          {searchQuery && filteredCategories.length === 0 && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center text-gray-400 mt-4 text-sm"
-            >
-              No results found for "
-              <span className="text-yellow-400 font-bold">{searchQuery}</span>".
-              Check the spelling or use a different word or phrase.
-            </motion.p>
-          )}
         </motion.div>
 
         <motion.div
